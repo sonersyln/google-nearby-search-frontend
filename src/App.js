@@ -4,6 +4,7 @@ import Map from "./components/Map/Map";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import PlaceForm from "./components/PlaceForm/PlaceForm";
+import PlacesTable from "./components/PlacesTable/PlaceTable";
 
 const App = () => {
   const { places, center, handleSearch } = usePlaces();
@@ -13,9 +14,8 @@ const App = () => {
     <>
       <Header />
       <PlaceForm onSearch={handleSearch} mapRef={mapRef} />
-      <div className="map-container" ref={mapRef}>
         <Map center={center} places={places} />
-      </div>
+      <PlacesTable places={places} />
       <Footer />
     </>
   );
