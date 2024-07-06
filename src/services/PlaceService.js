@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "http://localhost:8070";
 
 export const fetchNearbyPlaces = async ({ longitude, latitude, radius }) => {
   try {
