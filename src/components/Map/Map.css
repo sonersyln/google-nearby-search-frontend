@@ -1,0 +1,21 @@
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    label, input, button {
+        font-size: 16px;
+    }
+}
