@@ -14,11 +14,11 @@ const App = () => {
     <>
       <Header />
       <PlaceForm onSearch={handleSearch} mapRef={mapRef} />
-        <Map center={center} places={places} />
+      <Map center={center} places={places} />
       <PlacesTable places={places} />
       <Footer />
     </>
   );
-}
+};
 
 export default App;

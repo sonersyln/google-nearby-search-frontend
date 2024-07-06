@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import {
   GoogleMap,
   LoadScript,
@@ -16,9 +16,10 @@ const mapContainerStyle = {
 
 const Map = ({ center, places }) => {
   const [selectedPlace, setSelectedPlace] = useState(null);
+  const mapRef = useRef(null);
 
   return (
-    <div className="map-container">
+    <div className="map-container" ref={mapRef}>
       <LoadScript
         googleMapsApiKey={googleMapsApiKey}
         loadingElement={<div>Loading...</div>}
