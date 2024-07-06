@@ -1,0 +1,77 @@
+.errorMessage {
+  color: red;
+}
+
+form {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+  transform: scale(1.03);
+}
+
+label {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  color: #555;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #f8f8f8;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  color: #495057;
+  background-color: #ffffff;
+  border-color: #28a745;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+button {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 8px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #ff7f50;
+  border-color: #ff7f50;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  color: #fff;
+  background-color: #ff6347;
+  border-color: #ff4500;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
