@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: auto;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -10,12 +11,3 @@ h1 {
     width: 100%;
 }
 
-@media (max-width: 600px) {
-    form {
-        padding: 20px;
-    }
-
-    label, input, button {
-        font-size: 16px;
-    }
-}

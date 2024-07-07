@@ -2,6 +2,10 @@
   color: red;
 }
 
+.search-form{
+
+}
+
 form {
   max-width: 700px;
   margin: 20px auto;
@@ -74,4 +78,10 @@ button:hover {
   background-color: #ff6347;
   border-color: #ff4500;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .search-form{
+  margin: 0 2.75rem;
+}
 }

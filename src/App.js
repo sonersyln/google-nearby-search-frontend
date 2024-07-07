@@ -12,7 +12,7 @@ const App = () => {
   const mapRef = useRef(null);
 
   return (
-    <>
+    <div className="app-container container-fluid">
       {loading && (
         <div className="loading-overlay">
           <div className="spinner"></div>
@@ -23,7 +23,7 @@ const App = () => {
       <Map center={center} places={places} />
       <PlacesTable places={places} />
       <Footer />
-    </>
+    </div>
   );
 };
 

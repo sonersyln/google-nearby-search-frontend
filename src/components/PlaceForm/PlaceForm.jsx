@@ -37,6 +37,7 @@ const PlaceForm = ({ onSearch, mapRef }) => {
   };
 
   return (
+    <div className="search-form">
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
@@ -85,6 +86,7 @@ const PlaceForm = ({ onSearch, mapRef }) => {
         </Form>
       )}
     </Formik>
+    </div>
   );
 };
 

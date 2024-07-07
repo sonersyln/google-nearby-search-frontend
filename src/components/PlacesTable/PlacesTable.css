@@ -1,7 +1,7 @@
 .table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
+    margin-bottom: 30px;
 }
 
 .table-striped tbody tr:nth-of-type(odd) {

@@ -3,6 +3,7 @@ import "./PlacesTable.css";
 
 const PlacesTable = ({ places }) => {
   return (
+    <div className="places-table">
     <div className="table-container">
       {places.length > 0 && (
         <table className="table table-striped">
@@ -24,6 +25,7 @@ const PlacesTable = ({ places }) => {
           </tbody>
         </table>
       )}
+    </div>
     </div>
   );
 };
