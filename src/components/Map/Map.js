@@ -22,7 +22,6 @@ const Map = ({ center, places }) => {
     <div className="map-container" ref={mapRef}>
       <LoadScript
         googleMapsApiKey={googleMapsApiKey}
-        loadingElement={<div>Loading...</div>}
         libraries={["places"]}
       >
         <GoogleMap

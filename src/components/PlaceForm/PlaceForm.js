@@ -31,7 +31,6 @@ const PlaceForm = ({ onSearch, mapRef }) => {
 
   const handleSubmit = (values) => {
     onSearch(values);
-    console.log("Form submitted:", values);
     if (mapRef.current) {
       mapRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -52,7 +51,7 @@ const PlaceForm = ({ onSearch, mapRef }) => {
             id="latitude"
             name="latitude"
             type="text"
-            placeholder="Latitude"
+            placeholder="Enter latitude (e.g., 40.9901)"
           />
           <ErrorMessage
             name="latitude"
@@ -65,7 +64,7 @@ const PlaceForm = ({ onSearch, mapRef }) => {
             id="longitude"
             name="longitude"
             type="text"
-            placeholder="Longitude"
+            placeholder="Enter longitude (e.g., 28.7799)"
           />
           <ErrorMessage
             name="longitude"
@@ -74,7 +73,8 @@ const PlaceForm = ({ onSearch, mapRef }) => {
           />
 
           <label htmlFor="radius">Radius (m)</label>
-          <Field id="radius" name="radius" type="text" placeholder="Radius" />
+          <Field id="radius" name="radius" type="text" 
+          placeholder="Enter search radius in meters (e.g., 500)" />
           <ErrorMessage
             name="radius"
             component="div"
