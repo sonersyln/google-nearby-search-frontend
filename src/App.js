@@ -5,13 +5,19 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import PlaceForm from "./components/PlaceForm/PlaceForm";
 import PlacesTable from "./components/PlacesTable/PlaceTable";
+import "./App.css";
 
 const App = () => {
-  const { places, center, handleSearch } = usePlaces();
+  const { places, center, handleSearch, loading } = usePlaces();
   const mapRef = useRef(null);
 
   return (
     <>
+      {loading && (
+        <div className="loading-overlay">
+          <div className="spinner"></div>
+        </div>
+      )}
       <Header />
       <PlaceForm onSearch={handleSearch} mapRef={mapRef} />
       <Map center={center} places={places} />
