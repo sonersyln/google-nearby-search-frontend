@@ -8,7 +8,7 @@ import PlacesTable from "./components/PlacesTable/PlaceTable";
 import "./App.css";
 
 const App = () => {
-  const { places, center, handleSearch, loading } = usePlaces();
+  const { places, center, radius, handleSearch, loading } = usePlaces();
   const mapRef = useRef(null);
 
   return (
@@ -20,7 +20,7 @@ const App = () => {
       )}
       <Header />
       <PlaceForm onSearch={handleSearch} mapRef={mapRef} />
-      <Map center={center} places={places} />
+      <Map center={center} places={places} radius={radius} />
       <PlacesTable places={places} />
       <Footer />
     </div>
