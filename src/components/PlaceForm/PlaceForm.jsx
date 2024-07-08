@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import "./PlaceForm.css";
 
 const PlaceForm = ({ onSearch, mapRef }) => {
+  const formRef = useRef(null);
+
   const initialValues = {
     latitude: "",
     longitude: "",
@@ -37,55 +39,59 @@ const PlaceForm = ({ onSearch, mapRef }) => {
   };
 
   return (
-    <div className="search-form">
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-      validateOnChange={true}
-    >
-      {(formik) => (
-        <Form>
-          <h3 style={{ textAlign: "center" }}>Search Nearby Places</h3>
-          <label htmlFor="latitude">Latitude</label>
-          <Field
-            id="latitude"
-            name="latitude"
-            type="text"
-            placeholder="Enter latitude (e.g., 40.9901)"
-          />
-          <ErrorMessage
-            name="latitude"
-            component="div"
-            className="errorMessage"
-          />
+    <div className="search-form" ref={formRef}>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+        validateOnChange={true}
+      >
+        {(formik) => (
+          <Form>
+            <h3 style={{ textAlign: "center" }}>Search Nearby Places</h3>
+            <label htmlFor="latitude">Latitude</label>
+            <Field
+              id="latitude"
+              name="latitude"
+              type="text"
+              placeholder="Enter latitude (e.g., 40.9901)"
+            />
+            <ErrorMessage
+              name="latitude"
+              component="div"
+              className="errorMessage"
+            />
 
-          <label htmlFor="longitude">Longitude</label>
-          <Field
-            id="longitude"
-            name="longitude"
-            type="text"
-            placeholder="Enter longitude (e.g., 28.7799)"
-          />
-          <ErrorMessage
-            name="longitude"
-            component="div"
-            className="errorMessage"
-          />
+            <label htmlFor="longitude">Longitude</label>
+            <Field
+              id="longitude"
+              name="longitude"
+              type="text"
+              placeholder="Enter longitude (e.g., 28.7799)"
+            />
+            <ErrorMessage
+              name="longitude"
+              component="div"
+              className="errorMessage"
+            />
 
-          <label htmlFor="radius">Radius (m)</label>
-          <Field id="radius" name="radius" type="text" 
-          placeholder="Enter search radius in meters (e.g., 500)" />
-          <ErrorMessage
-            name="radius"
-            component="div"
-            className="errorMessage"
-          />
+            <label htmlFor="radius">Radius (m)</label>
+            <Field
+              id="radius"
+              name="radius"
+              type="text"
+              placeholder="Enter radius in meters (e.g., 500)"
+            />
+            <ErrorMessage
+              name="radius"
+              component="div"
+              className="errorMessage"
+            />
 
-          <button type="submit">Search</button>
-        </Form>
-      )}
-    </Formik>
+            <button type="submit">Search</button>
+          </Form>
+        )}
+      </Formik>
     </div>
   );
 };

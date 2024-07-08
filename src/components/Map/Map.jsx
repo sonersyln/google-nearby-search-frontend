@@ -1,5 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
-import { GoogleMap, LoadScript, Marker, InfoWindow, Circle } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+  Circle,
+} from "@react-google-maps/api";
 import googleMapsApiKey from "../../config/config";
 import "./Map.css";
 
@@ -11,7 +17,6 @@ const mapContainerStyle = {
 
 const Map = ({ center, places, radius }) => {
   const [selectedPlace, setSelectedPlace] = useState(null);
-  const mapRef = useRef(null);
   const [mapInstance, setMapInstance] = useState(null);
   const circleRef = useRef(null);
 
@@ -48,7 +53,7 @@ const Map = ({ center, places, radius }) => {
 
   return (
     <div className="map">
-      <div className="map-container" ref={mapRef}>
+      <div className="map-container">
         <LoadScript googleMapsApiKey={googleMapsApiKey} libraries={["places"]}>
           <GoogleMap
             mapContainerStyle={mapContainerStyle}

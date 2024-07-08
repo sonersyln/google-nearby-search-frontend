@@ -3,7 +3,10 @@ import { fetchNearbyPlaces } from "../services/PlaceService";
 
 const usePlaces = () => {
   const [places, setPlaces] = useState([]);
-  const [center, setCenter] = useState({ lat: 40.99029484111731, lng: 28.782688213173742 });
+  const [center, setCenter] = useState({
+    lat: 40.99029484111731,
+    lng: 28.782688213173742,
+  });
   const [radius, setRadius] = useState(null);
   const [loading, setLoading] = useState(false);
 

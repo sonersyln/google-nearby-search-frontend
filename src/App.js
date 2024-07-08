@@ -20,7 +20,9 @@ const App = () => {
       )}
       <Header />
       <PlaceForm onSearch={handleSearch} mapRef={mapRef} />
-      <Map center={center} places={places} radius={radius} />
+      <div ref={mapRef}>
+        <Map center={center} places={places} radius={radius} />
+      </div>
       <PlacesTable places={places} />
       <Footer />
     </div>
